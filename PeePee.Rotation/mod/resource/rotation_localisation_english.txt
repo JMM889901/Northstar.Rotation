@@ -1,0 +1,10 @@
+"lang"
+{
+	"Language" "english"
+	"Tokens"
+	{
+		"MODE_SETTING_CATEGORY_ROTATION" "Rotation"
+		"rotate_abilities" "Rotate offhands"
+		"rotate_weapons" "Rotate weapons"
+	}
+}
