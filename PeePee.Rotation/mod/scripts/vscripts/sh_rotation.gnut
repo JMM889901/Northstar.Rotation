@@ -53,7 +53,6 @@ void function rotation_Init() {
 		"mp_weapon_grenade_sonar"
 	]
 		array<string> pilotNades = [
-		"mp_weapon_frag_drone",
 		"mp_weapon_frag_grenade",
 		"mp_weapon_grenade_electric_smoke",
 		"mp_weapon_grenade_emp",
@@ -79,9 +78,9 @@ struct{
         }
 	void function cycle(){
 		while (GetGameState() == eGameState.Playing){
-			file.weapon = pilotGuns[RandomInt(pilotGuns.len())]
-			file.grenade = pilotNades[RandomInt(pilotAbility.len())]
-			file.tactical = pilotAbility[RandomInt(pilotAbility.len())]
+			file.weapon = pilotGuns[RandomInt(pilotGuns.len())-1]
+			file.grenade = pilotNades[RandomInt(pilotAbility.len())-1]
+			file.tactical = pilotAbility[RandomInt(pilotAbility.len())-1]
 			foreach ( entity player in GetPlayerArray() ){
 				if(RotateAbilitiesEnabled()){
 					foreach ( entity weapon in player.GetOffhandWeapons() )
