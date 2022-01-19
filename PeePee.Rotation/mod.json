@@ -1,0 +1,24 @@
+{
+	"Name" : "Rotation",
+	"Description" : "Rotation",
+	"Version": "0.1.0",
+	"LoadPriority": 1,
+
+	"Scripts": [
+		{
+			"Path": "sh_rotation.gnut",
+			"RunOn": "MP",
+			"ClientCallback": {
+				"After": "rotation_Init"
+			},
+
+			"ServerCallback": {
+				"After": "rotation_Init"
+			}
+		}
+	],
+
+	"Localisation": [
+		"resource/rotation_localisation_%language%.txt"
+	]
+}
